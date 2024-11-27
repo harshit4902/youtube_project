@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download YouTube Video</title>
+    <link rel="stylesheet" href="/static/result-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>{{ video_title }}</h1>
+
+        <div class="sections">
+            <h2>Available Video Download Links:</h2>
+            <div class="card-container">
+                {% for link in video_links %}
+                <a href="{{ link.url }}" class="download-btn" target="_blank">
+                    Download {{ link.resolution }} ({{ link.size }})
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="sections">
+            <h2>Available Audio Download Links:</h2>
+            <div class="card-container">
+                {% for link in audio_links %}
+                <a href="{{ link.url }}" class="download-btn" target="_blank">
+                    Download {{ link.abr }} ({{ link.size }})
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a href="/" class="back-link">Go back</a>
+    </div>
+</body>
+
+</html>

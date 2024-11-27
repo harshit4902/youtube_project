@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Link Submission</title>
+    <link rel="stylesheet" href="/static/index-styles.css">
+</head>
+<body>
+    <h1>Submit YouTube Video Link</h1>
+    <form action="/submit" method="post">
+        <label for="youtube_link">YouTube Video Link:</label>
+        <input type="url" id="youtube_link" name="youtube_link" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
